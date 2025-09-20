@@ -11,6 +11,13 @@ import FAQ from "@/components/FAQ";
 import EmailSignup from "@/components/EmailSignup";
 import Navbar from "@/components/Navbar";
 import UnderConstruction from "@/components/UnderConstruction";
+import ProductGallery from "@/components/ProductGallery";
+import HowItWorks from "@/components/HowItWorks";
+import ComparisonTable from "@/components/ComparisonTable";
+import PressSection from "@/components/PressSection";
+import StatsSection from "@/components/StatsSection";
+import BlogPreview from "@/components/BlogPreview";
+import InteractiveDemo from "@/components/InteractiveDemo";
 
 export default function Home() {
   return (
@@ -18,11 +25,18 @@ export default function Home() {
       <UnderConstruction />
       <Navbar />
       <Hero />
+      <StatsSection />
       <VideoSection />
       <Features />
+      <HowItWorks />
+      <ProductGallery />
+      <InteractiveDemo />
       <AppShowcase />
+      <ComparisonTable />
       <Pricing />
       <Testimonials />
+      <PressSection />
+      <BlogPreview />
       <FAQ />
       <EmailSignup />
 

@@ -10,7 +10,7 @@ const blogPosts = [
     date: "Jan 15, 2025",
     readTime: "5 min read",
     category: "Tips & Tricks",
-    image: "🏌️"
+    image: "TIPS"
   },
   {
     title: "The Science Behind LED Practice",
@@ -19,7 +19,7 @@ const blogPosts = [
     date: "Jan 12, 2025",
     readTime: "7 min read",
     category: "Technology",
-    image: "🧠"
+    image: "TECH"
   },
   {
     title: "From 20 Handicap to Single Digits",
@@ -28,7 +28,7 @@ const blogPosts = [
     date: "Jan 10, 2025",
     readTime: "4 min read",
     category: "Success Stories",
-    image: "📈"
+    image: "STORY"
   }
 ];
 
@@ -43,7 +43,7 @@ export default function BlogPreview() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl font-bold mb-4">
-            Latest from the <span className="text-primary">Blog</span>
+            Recent Articles
           </h2>
           <p className="text-xl text-gray-300">
             Tips, tricks, and stories from the BackyardGolf community
@@ -59,14 +59,14 @@ export default function BlogPreview() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group cursor-pointer"
             >
-              <div className="bg-gray-900/50 rounded-lg overflow-hidden border border-gray-800 hover:border-primary/50 transition-all">
-                <div className="h-48 bg-gradient-to-br from-primary/20 to-green-500/10 flex items-center justify-center text-6xl">
-                  {post.image}
+              <div className="bg-black rounded overflow-hidden border border-gray-900 hover:border-gray-800 transition-all">
+                <div className="h-48 bg-gray-950 flex items-center justify-center">
+                  <span className="text-xs font-mono text-gray-700">{post.image}</span>
                 </div>
 
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs px-2 py-1 bg-primary/20 text-primary rounded-full">
+                    <span className="text-xs px-2 py-1 border border-gray-800 text-gray-500 rounded">
                       {post.category}
                     </span>
                     <span className="text-xs text-gray-500">{post.readTime}</span>
@@ -86,7 +86,7 @@ export default function BlogPreview() {
                       <span className="mx-2">·</span>
                       <span>{post.date}</span>
                     </div>
-                    <span className="text-primary group-hover:translate-x-1 transition-transform">
+                    <span className="text-gray-600 group-hover:translate-x-1 transition-transform">
                       →
                     </span>
                   </div>
@@ -102,7 +102,7 @@ export default function BlogPreview() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mt-12 text-center"
         >
-          <button className="bg-primary text-black px-8 py-3 rounded-lg font-semibold hover:bg-green-400 transition-all">
+          <button className="bg-white text-black px-8 py-3 rounded font-medium hover:bg-gray-100 transition-all">
             View All Articles
           </button>
         </motion.div>

@@ -8,42 +8,42 @@ const productImages = [
     id: 1,
     title: "LED Night Mode",
     description: "8 vibrant colors illuminate your practice",
-    thumbnail: "🌟",
+    thumbnail: "01",
     features: ["8 LED Colors", "Auto Color Cycle", "Brightness Control"]
   },
   {
     id: 2,
     title: "Day Mode Setup",
     description: "Clean, portable design for anywhere",
-    thumbnail: "☀️",
+    thumbnail: "02",
     features: ["Portable Design", "Quick Setup", "No Tools Required"]
   },
   {
     id: 3,
     title: "Smart Tracking",
     description: "Precision UWB technology",
-    thumbnail: "📡",
+    thumbnail: "03",
     features: ["±1cm Accuracy", "50 Yard Range", "Instant Feedback"]
   },
   {
     id: 4,
     title: "Mobile App",
     description: "Complete control in your pocket",
-    thumbnail: "📱",
+    thumbnail: "04",
     features: ["iOS Compatible", "Live Stats", "Progress Tracking"]
   },
   {
     id: 5,
     title: "Weatherproof",
     description: "Built for any condition",
-    thumbnail: "🌧️",
+    thumbnail: "05",
     features: ["IP65 Rated", "All Weather", "Durable Materials"]
   },
   {
     id: 6,
     title: "Multiplayer",
     description: "Challenge friends and family",
-    thumbnail: "👥",
+    thumbnail: "06",
     features: ["4 Players", "Tournament Mode", "Live Leaderboard"]
   }
 ];
@@ -52,7 +52,7 @@ export default function ProductGallery() {
   const [selectedImage, setSelectedImage] = useState(productImages[0]);
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-background to-gray-900/30">
+    <section className="py-20 px-4 bg-black">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -61,7 +61,7 @@ export default function ProductGallery() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl font-bold mb-4">
-            Experience Every <span className="text-primary">Feature</span>
+            Product Features
           </h2>
           <p className="text-xl text-gray-300">
             Click to explore BackyardGolf's innovative features
@@ -74,7 +74,7 @@ export default function ProductGallery() {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="bg-gray-900/50 rounded-2xl p-8 flex flex-col items-center justify-center min-h-[400px]"
+            className="bg-gray-950 border border-gray-900 rounded p-8 flex flex-col items-center justify-center min-h-[400px]"
           >
             <motion.div
               key={selectedImage.id}
@@ -83,8 +83,8 @@ export default function ProductGallery() {
               transition={{ duration: 0.3 }}
               className="text-center"
             >
-              <div className="text-8xl mb-6">{selectedImage.thumbnail}</div>
-              <h3 className="text-2xl font-bold mb-4 text-primary">
+              <div className="text-sm font-mono text-gray-500 mb-6">FEATURE_{selectedImage.thumbnail}</div>
+              <h3 className="text-2xl font-bold mb-4 text-white">
                 {selectedImage.title}
               </h3>
               <p className="text-gray-300 mb-6">{selectedImage.description}</p>
@@ -92,7 +92,7 @@ export default function ProductGallery() {
                 {selectedImage.features.map((feature, index) => (
                   <span
                     key={index}
-                    className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm"
+                    className="px-3 py-1 border border-gray-800 text-gray-400 rounded text-sm"
                   >
                     {feature}
                   </span>
@@ -112,11 +112,11 @@ export default function ProductGallery() {
                 onClick={() => setSelectedImage(image)}
                 className={`p-6 rounded-lg border-2 transition-all ${
                   selectedImage.id === image.id
-                    ? "border-primary bg-primary/10"
-                    : "border-gray-800 bg-gray-900/50 hover:border-gray-600"
+                    ? "border-gray-600 bg-gray-900"
+                    : "border-gray-800 bg-black hover:border-gray-700"
                 }`}
               >
-                <div className="text-4xl mb-2">{image.thumbnail}</div>
+                <div className="text-sm font-mono text-gray-600 mb-2">{image.thumbnail}</div>
                 <p className="text-sm font-medium">{image.title}</p>
               </motion.button>
             ))}

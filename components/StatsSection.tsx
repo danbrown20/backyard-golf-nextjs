@@ -66,7 +66,7 @@ function AnimatedNumber({ value, suffix }: { value: number; suffix: string }) {
 
 export default function StatsSection() {
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-background to-gray-900/30">
+    <section className="py-20 px-4 bg-gray-950">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -75,7 +75,7 @@ export default function StatsSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold mb-4">
-            The Numbers <span className="text-primary">Speak</span>
+            Performance Metrics
           </h2>
           <p className="text-xl text-gray-300">
             Join thousands of golfers already improving their game
@@ -93,7 +93,7 @@ export default function StatsSection() {
             >
               <motion.div
                 whileHover={{ scale: 1.05 }}
-                className="bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl p-8"
+                className="bg-black border border-gray-900 rounded p-8"
               >
                 <div className="text-5xl font-bold text-primary mb-2">
                   <AnimatedNumber value={stat.value} suffix={stat.suffix} />
@@ -111,10 +111,9 @@ export default function StatsSection() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-16 text-center"
         >
-          <div className="inline-flex items-center gap-4 px-6 py-3 bg-primary/10 rounded-full">
-            <span className="text-2xl">🏆</span>
+          <div className="inline-flex items-center gap-4 px-6 py-3 border border-gray-800 rounded">
             <span className="text-lg">
-              <span className="font-bold text-primary">Winner:</span> Best Golf Innovation 2024
+              <span className="font-bold text-white">Award Winner:</span> Best Golf Innovation 2024
             </span>
           </div>
         </motion.div>

@@ -11,7 +11,7 @@ const demoModes = [
     features: ["Distance tracking", "Accuracy scoring", "Progress charts"],
     color: "text-green-400",
     bgColor: "from-green-500/20",
-    icon: "🎯"
+    icon: "PRACTICE"
   },
   {
     id: "challenge",
@@ -20,7 +20,7 @@ const demoModes = [
     features: ["50 challenges", "Skill levels", "Achievement badges"],
     color: "text-blue-400",
     bgColor: "from-blue-500/20",
-    icon: "🏆"
+    icon: "CHALLENGE"
   },
   {
     id: "multiplayer",
@@ -29,7 +29,7 @@ const demoModes = [
     features: ["4 player support", "Tournament brackets", "Live scoring"],
     color: "text-purple-400",
     bgColor: "from-purple-500/20",
-    icon: "👥"
+    icon: "MULTI"
   },
   {
     id: "night",
@@ -38,7 +38,7 @@ const demoModes = [
     features: ["8 LED colors", "Pattern games", "Music sync"],
     color: "text-pink-400",
     bgColor: "from-pink-500/20",
-    icon: "🌙"
+    icon: "NIGHT"
   }
 ];
 
@@ -52,7 +52,7 @@ export default function InteractiveDemo() {
   ];
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-gray-900/30 to-background">
+    <section className="py-20 px-4 bg-black">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -61,7 +61,7 @@ export default function InteractiveDemo() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl font-bold mb-4">
-            Try the <span className="text-primary">Interactive Demo</span>
+            Interactive Demo
           </h2>
           <p className="text-xl text-gray-300">
             Explore different game modes and LED configurations
@@ -74,7 +74,7 @@ export default function InteractiveDemo() {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="bg-gray-900/50 rounded-2xl p-8"
+            className="bg-gray-950 border border-gray-900 rounded p-8"
           >
             <div className="aspect-video bg-black rounded-lg mb-6 relative overflow-hidden">
               {/* Simulated Golf Target */}
@@ -104,7 +104,7 @@ export default function InteractiveDemo() {
                       }}
                     />
                   ))}
-                  <div className="text-6xl">{selectedMode.icon}</div>
+                  <div className="text-xs font-mono text-gray-600">{selectedMode.icon}</div>
                 </motion.div>
               </div>
 
@@ -170,12 +170,12 @@ export default function InteractiveDemo() {
                   onClick={() => setSelectedMode(mode)}
                   className={`w-full text-left p-6 rounded-lg border-2 transition-all ${
                     selectedMode.id === mode.id
-                      ? "border-primary bg-gradient-to-r " + mode.bgColor + " to-transparent"
-                      : "border-gray-800 bg-gray-900/50 hover:border-gray-600"
+                      ? "border-gray-700 bg-gray-900"
+                      : "border-gray-900 bg-black hover:border-gray-800"
                   }`}
                 >
                   <div className="flex items-start gap-4">
-                    <span className="text-3xl">{mode.icon}</span>
+                    <span className="text-xs font-mono text-gray-600">{mode.icon}</span>
                     <div className="flex-1">
                       <h4 className={`text-lg font-bold mb-1 ${
                         selectedMode.id === mode.id ? mode.color : ""
@@ -211,10 +211,10 @@ export default function InteractiveDemo() {
             Experience the full demo with our mobile app
           </p>
           <div className="flex gap-4 justify-center">
-            <button className="bg-primary text-black px-6 py-3 rounded-lg font-semibold hover:bg-green-400 transition-all">
+            <button className="bg-white text-black px-6 py-3 rounded font-medium hover:bg-gray-100 transition-all">
               Download iOS App
             </button>
-            <button className="border border-primary text-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary hover:text-black transition-all">
+            <button className="border border-gray-700 text-gray-400 px-6 py-3 rounded font-medium hover:bg-gray-900 hover:text-white transition-all">
               View Web Demo
             </button>
           </div>

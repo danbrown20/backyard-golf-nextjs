@@ -12,7 +12,7 @@ export default function Countdown() {
 
   useEffect(() => {
     // Set your launch date here
-    const launchDate = new Date('2025-02-01T00:00:00').getTime();
+    const launchDate = new Date('2026-02-01T00:00:00').getTime();
 
     const timer = setInterval(() => {
       const now = new Date().getTime();

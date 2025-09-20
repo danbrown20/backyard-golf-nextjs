@@ -4,20 +4,20 @@ import { motion } from "framer-motion";
 
 const features = [
   { feature: "Price", backyard: "$299", simulator: "$15,000+", net: "$150", mat: "$50" },
-  { feature: "LED Night Mode", backyard: "✅ 8 Colors", simulator: "❌", net: "❌", mat: "❌" },
-  { feature: "Shot Tracking", backyard: "✅ ±1cm", simulator: "✅ High", net: "❌", mat: "❌" },
-  { feature: "Portable", backyard: "✅ Folds Flat", simulator: "❌", net: "Partial", mat: "✅" },
+  { feature: "LED Night Mode", backyard: "8 Colors", simulator: "No", net: "No", mat: "No" },
+  { feature: "Shot Tracking", backyard: "±1cm", simulator: "High", net: "No", mat: "No" },
+  { feature: "Portable", backyard: "Folds Flat", simulator: "No", net: "Partial", mat: "Yes" },
   { feature: "Setup Time", backyard: "2 min", simulator: "2+ hours", net: "10 min", mat: "1 min" },
-  { feature: "Weather Resistant", backyard: "✅ IP65", simulator: "Indoor Only", net: "Limited", mat: "✅" },
-  { feature: "Mobile App", backyard: "✅ Free", simulator: "✅ Extra Cost", net: "❌", mat: "❌" },
-  { feature: "Multiplayer", backyard: "✅ 4 Players", simulator: "✅", net: "❌", mat: "❌" },
+  { feature: "Weather Resistant", backyard: "IP65", simulator: "Indoor Only", net: "Limited", mat: "Yes" },
+  { feature: "Mobile App", backyard: "Free", simulator: "Extra Cost", net: "No", mat: "No" },
+  { feature: "Multiplayer", backyard: "4 Players", simulator: "Yes", net: "No", mat: "No" },
   { feature: "Space Required", backyard: "10-50 yards", simulator: "Full Room", net: "10 feet", mat: "6 feet" },
-  { feature: "Real Ball Feel", backyard: "✅", simulator: "✅", net: "✅", mat: "Limited" }
+  { feature: "Real Ball Feel", backyard: "Yes", simulator: "Yes", net: "Yes", mat: "Limited" }
 ];
 
 export default function ComparisonTable() {
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-gray-900/30 to-background">
+    <section className="py-20 px-4 bg-gray-950">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -26,7 +26,7 @@ export default function ComparisonTable() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl font-bold mb-4">
-            See How BackyardGolf <span className="text-primary">Compares</span>
+            Product Comparison
           </h2>
           <p className="text-xl text-gray-300">
             The perfect balance of features, portability, and value
@@ -72,22 +72,22 @@ export default function ComparisonTable() {
                 >
                   <td className="py-4 px-4 font-medium">{row.feature}</td>
                   <td className="py-4 px-4 text-center">
-                    <span className={row.backyard.includes("✅") ? "text-green-400" : "text-primary font-semibold"}>
+                    <span className="text-white font-medium">
                       {row.backyard}
                     </span>
                   </td>
                   <td className="py-4 px-4 text-center">
-                    <span className={row.simulator.includes("❌") ? "text-gray-500" : ""}>
+                    <span className="text-gray-400">
                       {row.simulator}
                     </span>
                   </td>
                   <td className="py-4 px-4 text-center">
-                    <span className={row.net.includes("❌") ? "text-gray-500" : ""}>
+                    <span className="text-gray-400">
                       {row.net}
                     </span>
                   </td>
                   <td className="py-4 px-4 text-center">
-                    <span className={row.mat.includes("❌") ? "text-gray-500" : ""}>
+                    <span className="text-gray-400">
                       {row.mat}
                     </span>
                   </td>

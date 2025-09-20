@@ -6,8 +6,8 @@ import Countdown from "./Countdown";
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-32 pb-20 px-4">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-green-900/20 to-background" />
+      {/* Background */}
+      <div className="absolute inset-0 bg-gray-950" />
 
       <div className="relative z-10 max-w-7xl mx-auto text-center">
         <motion.div
@@ -16,8 +16,8 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="mb-8"
         >
-          <span className="inline-block px-4 py-2 bg-primary/20 text-primary rounded-full text-sm font-semibold">
-            🚀 Launching February 2025
+          <span className="inline-block px-4 py-2 border border-gray-700 text-gray-300 rounded text-sm font-medium uppercase tracking-wider">
+            Launching February 2026
           </span>
         </motion.div>
 

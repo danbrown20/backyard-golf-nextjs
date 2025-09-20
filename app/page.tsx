@@ -18,6 +18,10 @@ import PressSection from "@/components/PressSection";
 import StatsSection from "@/components/StatsSection";
 import BlogPreview from "@/components/BlogPreview";
 import InteractiveDemo from "@/components/InteractiveDemo";
+import GameRules from "@/components/GameRules";
+import TournamentFormats from "@/components/TournamentFormats";
+import PracticeDrills from "@/components/PracticeDrills";
+import ShippingWarranty from "@/components/ShippingWarranty";
 
 export default function Home() {
   return (
@@ -31,9 +35,13 @@ export default function Home() {
       <HowItWorks />
       <ProductGallery />
       <InteractiveDemo />
+      <GameRules />
+      <PracticeDrills />
       <AppShowcase />
       <ComparisonTable />
+      <TournamentFormats />
       <Pricing />
+      <ShippingWarranty />
       <Testimonials />
       <PressSection />
       <BlogPreview />
